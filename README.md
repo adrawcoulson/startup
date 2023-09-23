@@ -1,9 +1,10 @@
 #Family Pass
 ## **Elevator pitch**
 The first lesson I was taught as a child was how to share. This valuable lesson followed me into adulthood where I'm still sharing with my family! We share wifi, televisions, online subscriptions, and musical libraries. But _sharing is caring_ loses its ring when you can't log into Netflix because your older brother changed the password to his fantasy football league name. Dont you wish there was a way to generate memorible passwords the entire family could access? Good, because that's where I come in.
+
 ## **Design**
 
-![Website Design] (
+![Family_Pass](https://github.com/adrawcoulson/startup/assets/108026507/11ad797f-e938-4042-8faf-3b5c5ecc6c53)
 
 ## **Key Features**
 - Secure login over HTTPS
@@ -16,22 +17,16 @@ The first lesson I was taught as a child was how to share. This valuable lesson 
 - Ability for user to lock in vote for top choice
 
 ## Technologies
-_This text is italicized_
-**This text is _extrememly_ important
-Text that is not a qoute
-> Text that is a qoute
-Go here to get Rick Rolled [https://www.youtube.com/watch?v=dQw4w9WgXcQ]
-
-Elevator pitch
-key features
-
-HTML +
-CSS +
-JavaScript +
-Calling Web Services
-Providing Web Services
-Authentification: An input for user to create an account/login. Display name after login).
-Storing data persistently 
-Using web sockets
-Database data: rendering of application data stored in database(high scores)
-WebSocket data: rendering of data recieved from the server
+I am going to use the required technologies in the following ways:
+- **HTML:** Uses correct HTML structure for application. Three HTML pages. One for login, one for generating passwords, and one for voting.
+- **CSS:** Application styling that looks good on different screen sizes, uses good whitespace, color choice and contrast.
+- **JavaScript:** Provides login, Family Device display, displaying other users votes/suggestions
+- **Service:** Backend service with endpoints for:
+    - login
+    - retrieving suggested passwords
+    - submitting votes
+    - retrieving vote status
+- **Database:** Store users, suggested passwords, and votes
+- **Login:**Register and login users. Credentials securely stored in database. Can't vote unless authenticated.
+- **WebSocket:**As each user submits a password or votes, their password/votes are broadcast to all other users. 
+- **React:**Application ported to use the React web framework(not actually sure what this is)
