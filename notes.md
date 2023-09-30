@@ -7,3 +7,6 @@
   - <a href = "URL"> a is for anchor, href is for hyperlink reference
   - <img scr = "URL.jpg"> to connect images
   - always close HTML line with </repeat of initial command>
+**HTML Media**
+- HTML youtube videos. Share > Embed > Copy code
+- HTML Image. Add file to GitHub, copy image address
