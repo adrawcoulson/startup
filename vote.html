@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Family Pass</title>
+    <title>Vote</title>
     <link rel="icon" href="favicon.ico" />
   </head>
   <body>
     <!-- Use header, main, and footer elements to give semantic structure -->
     <header>
-      <h1>Family Pass<sup>&reg;</sup></h1>
+      <h1>Voting<sup>&reg;</sup></h1>
 
       <!-- Navigation elements -->
       <nav>
@@ -27,13 +27,30 @@
     </header>
 
     <main>
-      <h1>Welcome</h1>
-      <p>Login to play</p>
-      <form method="get" action="play.html">
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Your name here" />
-        <button type="submit">Login</button>
-      </form>
+      <div class="players">
+        Device:
+        <span class="player-suggestion">Roku TV</span>
+      </div>
+      <ul class="notification">
+        <li class="player-suggestion">p@$$word1234</li>
+        <li class="player-suggestion">PasswordSuggestion</li>
+        <li class="player-suggestion">IamApassword</li>
+      </ul>
+
+      <!-- More formatting with old style HTML -->
+      <br />
+
+      <div>
+        <label for="count">Generate Password</label>
+        <input type="text" id="count" placeholder="password base case here" />
+        <button type="submit">Generate</button>
+      </div>
+
+      <br />
+
+      <div>
+
+      </div>
     </main>
 
     <footer>
