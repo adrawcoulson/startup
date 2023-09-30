@@ -3,3 +3,7 @@
 **Amazon Web Servics**
 - My IP address is 52.22.1.162
 - Command to remote shell into my server is ssh -i ~/Downloads/production.pem ubuntu@3.83.118.14
+**HTML Beginnings**
+  - <a href = "URL"> a is for anchor, href is for hyperlink reference
+  - <img scr = "URL.jpg"> to connect images
+  - always close HTML line with </repeat of initial command>
