@@ -10,3 +10,5 @@
 **HTML Media**
 - HTML youtube videos. Share > Embed > Copy code
 - HTML Image. Add file to GitHub, copy image address
+**Javascript**
+- Coding is weak, can be reassigned types
