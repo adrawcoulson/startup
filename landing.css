@@ -24,7 +24,7 @@ main{
     justify-content: center;
     align-items: center;
 }
-.register{
+menu{
     display: flex;
     flex: 1;
     margin-left: 40%;
