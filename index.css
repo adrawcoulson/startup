@@ -1,3 +1,11 @@
-head {
+*{
+    text-align: center;
+}
+
+
+header {
     background-color: #444;
+}
+title {
+    text-align: center;
 }
