@@ -12,3 +12,5 @@
 - HTML Image. Add file to GitHub, copy image address
 **Javascript**
 - Coding is weak, can be reassigned types
+** Connecting .css
+- "" are object {} in.css
