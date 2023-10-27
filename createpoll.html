@@ -3,21 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href = "createpoll.css" rel = "stylesheet">
   </head>
   <body>
+    <ul id ="existingGroups"></ul>
     <header>
+        <h1>Create Poll</h1>
     </header>
     <main>
-        <h1>Create Poll</h1>
-        <form method="get" action="prevpass.html">
-          <button type="submit">Previous Passwords</button>
-        </form>
-        <form method="get" action="createpoll.html">
-            <button type="submit">Create Poll</button>
-          </form>
-          <form method="get" action="joinpoll.html">
-            <button type="submit">Join Poll</button>
-          </form>
+        <form method="get" action="vote.html"></form>
+        <div class = device>
+            <label for="name">Device Name</label>
+            <input type="text" id="name"/>
+            <br />
+            <label for="length">Password length</label>
+            <input type= int id="name"/> <!--needs to accept integers-->
+            <br />
+            <div class = capitilization>
+                <la>Capitilization</la>
+            <button class = "yes">Yes</button>
+            <button class = "no">No</button>
+            </div>
+            <div class = specialchar>
+                <la>Special Characters</la>
+                <button class = "yes">Yes</button>
+                <button class = "no">No</button>
+            </div>
+            <div class = includenumbers>
+                <la>Include Numbers</la>
+                <button class = "yes">Yes</button>
+                <button class = "no">No</button>
+            </div>
+        </div>
+        <div class = invite>
+            <label for="drop">Invite existing group</label>
+            <select id = "drop">
+            <option value = "Coulsons">Coulsons</option> <!--maybe a forloop -->
+            <option value = "Poulsons">Poulsons</option>
+            <!--for(var i = 1; i < 3; i++){
+                var groupName = document.createElement("")
+            }-->
+            </select>
+            <br />
+            <la>Invite New Group</la>
+            <br />
+            <label for="name">Group Name</label>
+            <input type="text" id="name"/>
+            <br />
+            <label for="member">Group Members</label>
+            <input type="text" id="member"/>
+            <br />
+            <br />
+
+
+
+
+            
+        </div>
+        <button type="submit">Create Poll</button>
+    </form>
+
     </main>
     <footer>
     </footer>
