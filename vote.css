@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
+.menu{
+    text-align: left;
+}
+main{
+    flex: 1 70px;
+    display: flex;
+    flex-direction: column;
+}
+.submission{
+    text-align: left;
+}
+.device{
+    text-align: left;
+}
+.voting{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}

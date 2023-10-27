@@ -1,63 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
     <!-- Tell browsers not to scale the viewport automatically -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vote</title>
-    <link rel="icon" href="favicon.ico" />
+    <link href = "vote.css" rel = "stylesheet">
   </head>
   <body>
     <!-- Use header, main, and footer elements to give semantic structure -->
     <header>
-      <h1>Voting<sup>&reg;</sup></h1>
-
-      <!-- Navigation elements -->
-      <nav>
-        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
-        <menu>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="vote.html">Vote</a></li>
-          <li><a href="prevpass.html">Previous Passwords</a></li>
-        </menu>
-      </nav>
-
-      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
-      <hr />
+      <div class = "menu">
+        <li><a href="index.html">Login</a></li>
+        <li><a href="vote.html">Vote</a></li>
+        <li><a href="prevpass.html">Previous Passwords</a></li>
+        <li><a href="landing.html">Landing Page</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="createpoll.html">Create Poll</a></li>
+        <li><a href="joinpoll.html">Join Poll</a></li>
+      </div>
     </header>
 
     <main>
-      <div class="players">
+      <h1>Voting</h1>
+      <div class = "submission">
+        <label for="password">Password Submission</label>
+        <input type="text" id="password" />
+        <button type="submit">Submit</button>
+      </div>
+
+
+      <div class="device">
         Device:
         <span class="player-suggestion">Roku TV</span>
       </div>
-      <ul class="notification">
-        <li class="player-suggestion">p@$$word1234</li>
-        <li class="player-suggestion">PasswordSuggestion</li>
-        <li class="player-suggestion">IamApassword</li>
-      </ul>
-
-      <!-- More formatting with old style HTML -->
       <br />
-
-      <div>
-        <label for="count">Generate Password</label>
-        <input type="text" id="count" placeholder="password base case here" />
-        <button type="submit">Generate</button>
-      </div>
-
       <br />
-
-      <div>
-
-      </div>
+      <table class="voting">
+        <tr>
+          <th>Username</th>
+          <th>Suggestion</th>
+          <th>Votes</th>
+          <th>Submit</th>
+          <tr>
+            <td data-th="Username">Dad</td>
+            <td data-th="Suggestion">HelloWorld</td>
+            <td data-th="Votes">2</td>
+            <td data-th="Submit"><button>Vote</button></td>
+          </tr>
+        </tr>
     </main>
-
     <footer>
-      <hr />
-      <span class="text-reset">Author Name(s)</span>
-      <br />
-      <a href="https://github.com/adrawcoulson/startup.git">GitHub</a>
     </footer>
   </body>
 </html>

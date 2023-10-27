@@ -1,0 +1,14 @@
+.menu{
+    text-align: left;
+}
+h1{
+    text-align: center;
+}
+main{
+    text-align: center;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}

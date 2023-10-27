@@ -1,16 +1,9 @@
-body{
-    text-align: center;
-    font-family: sans-serif;
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    height: 50vh;
+
+.menu{
+    text-align: left;
 }
-header {
-    color: black;
-    display: flex;
-    flex: 0.2 10px;
-    font-size: 10px;
+h1{
+    text-align: center;
 }
 footer {
     flex: 0.2 30px;

@@ -1,65 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Previous Passwords</title>
-    <link rel="icon" href="favicon.ico" />
+    <link href = "prevpass.css" rel = "stylesheet">
   </head>
   <body>
     <header>
-      <h1>Previous Passwords<sup>&reg;</sup></h1>
-
-      <nav>
-        <menu>
-          <li><a href="index.html">Home</a></li>
+      
+        <div class = "menu">
+          <li><a href="index.html">Login</a></li>
           <li><a href="vote.html">Vote</a></li>
           <li><a href="prevpass.html">Previous Passwords</a></li>
           <li><a href="landing.html">Landing Page</a></li>
-        </menu>
-      </nav>
-
-      <hr />
+          <li><a href="register.html">Register</a></li>
+          <li><a href="createpoll.html">Create Poll</a></li>
+          <li><a href="joinpoll.html">Join Poll</a></li>
+        </div>
     </header>
 
     <main>
-      <table>
-        <thead>
+      <h1>Previous Passwords</h1>
+      <table class="voting">
+        <tr>
+          <th>Username</th>
+          <th>Suggestion</th>
+          <th>Votes</th>
+          <th>Submit</th>
           <tr>
-            <th>#</th>
-            <th>Password</th>
-            <th>Device</th>
-            <th>Date</th>
+            <td data-th="Username">Dad</td>
+            <td data-th="Suggestion">HelloWorld</td>
+            <td data-th="Votes">2</td>
+            <td data-th="Submit"><button>Vote</button></td>
           </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>F@nt@seeF00tb@ll</td>
-            <td>Netflix</td>
-            <td>May 20, 2021</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>MY4kids1283</td>
-            <td>Family Computer</td>
-            <td>June 2, 2021</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>146969</td>
-            <td>Front Door</td>
-            <td>July 3, 2020</td>
-          </tr>
-        </tbody>
-      </table>
+        </tr>
     </main>
-
     <footer>
-      <hr />
-      <span class="text-reset">Author Name(s)</span>
-      <br />
-      <a href="https://github.com/adrawcoulson/startup.git">GitHub</a>
     </footer>
   </body>
 </html>
