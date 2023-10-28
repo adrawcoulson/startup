@@ -36,19 +36,19 @@ class Poll {
       this.newGrp = [];
     }
 
-    setDeviceName(name) {
-        const input = document.getElementById("devicename");
-        if(input){
-            input.value = deviceName;
+    setDeviceName() {
+        this.deviceName = document.getElementById("devicename");
+        if(this.deviceName){
+            console.log("Success: Device Name = " + this.deviceName.value);
         } else {
             console.error("No device name provided");
         }
     }
 
-    setPassLength(int) {
-        const input = document.getElementById("length");
-        if(input){
-            input.value = passwordLength;
+    setPassLength() {
+        this.passWordLength = document.getElementById("length");
+        if(this.passWordLength){
+            console.log("Success: Password Length = " + this.passWordLength.value);
         } else {
             console.error("Password length not provided");
         }
@@ -83,10 +83,14 @@ class Poll {
         if(yesNum && noNum){
             yesNum.addEventListener('click', () =>{
                 this.includeNumb = true;
+                console.log('Include numbers set to yes');
             });
             noNum.addEventListener('click', () =>{
                 this.includeNumb = false;
+                console.log('Include numbers set to no');
             });
         }
     }
 }
+
+const createPollObjectInstance = new Poll();
