@@ -5,6 +5,7 @@
     <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Family Pass</title>
+    <script src="login.js"></script>
     <link href = "index.css" rel = "stylesheet">
     <link rel="icon" href="favicon.ico" />
     <!-- Latest compiled and minified CSS -->
@@ -48,15 +49,13 @@
       <form method="get" action="landing.html">
         <label for="name">Name</label>
         <input type="text" id="name" placeholder="Your name here" />
+        <button class="btn btn-primary" onclick="login()">Login</button>
         <br />
-        <label for="password">Password</label>
-        <input type="text" id="password" placeholder="Your password here" />
-        <button type="submit">Login</button>
       </form>
       </div>
-      <form method="get" action="register.html">
+      <!--<form method="get" action="register.html">
         <button type="submit">Create Account</button>
-      </form>
+      </form>-->
     </main>
 
     <footer>
