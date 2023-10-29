@@ -30,3 +30,8 @@ I am going to use the required technologies in the following ways:
 - **Login:**Register and login users. Credentials securely stored in database. Can't vote unless authenticated.
 - **WebSocket:**As each user submits a password or votes, their password/votes are broadcast to all other users. 
 - **React:**Application ported to use the React web framework(not actually sure what this is)
+##October 28 startup assignment
+-created login.js page which is connected to my index.html and stores login information in local storage
+-created createpoll.js page which connects setters for Device Name, password length, and several booleans. Capitilization method
+has a toggle function which uses .css and javascript to clarify which option is currently selected
+-Assignment currently unfinishes, sorry! Will be caught up, although unlikely will this happen before the midterm
