@@ -14,3 +14,9 @@ main{
     justify-content: center;
     align-items: left;
 }
+.yesCap.active {
+    background-color: blue;
+}
+.noCap.active {
+    background-color: blue;
+}

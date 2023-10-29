@@ -26,7 +26,6 @@
             <input type="text" id="devicename"/>
             <button class="btn btn-primary" onclick="createPollObjectInstance.setDeviceName(devicename)">SetDeviceName</button>
         </div>
-
             <br />
             <label for="length">Password length (Numbers Only)</label>
             <input type= "number" id="length" step = "1"/>
@@ -34,17 +33,17 @@
             <br />
             <div class = capitalization>
                 <la>Capitilization</la>
-            <button class = "yesCap">Yes</button>
-            <button class = "noCap">No</button>
+                <button class="yesCap" onclick="toggleCapitalization(this)">Yes</button>
+                <button class = "noCap" onclick="toggleCapitalization(this)">No</button>
             </div>
             <div class = specialchar>
                 <la>Special Characters</la>
-                <button class = "yesChar">Yes</button>
+                <button class="yesChar" onclick="createPollObjectInstance.setSpecialChars()">Yes</button>
                 <button class = "noChar">No</button>
             </div>
             <div class = includenumbers>
                 <la>Include Numbers</la>
-                <button class = "yesNum">Yes</button>
+                <button class="yesNum" onclick="createPollObjectInstance.setIncludeNum()">Yes</button>
                 <button class = "noNum">No</button>
             </div>
         </div>
@@ -72,7 +71,6 @@
         <!--<form method="get" action="vote.html">
             <button type="submit">Create Poll</button>
             </form> -->
-        <button class="btn btn-primary" onclick="createPollObjectInstance.setDeviceName()">SetDeviceName</button>
     </main>
     <footer>
     </footer>

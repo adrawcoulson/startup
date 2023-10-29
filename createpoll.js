@@ -11,7 +11,11 @@ class Group{
     }
 }
 
-
+function toggleCapitalization(button){
+    const buttons = document.querySelectorAll('.capitalization button');
+    buttons.forEach((btn) => btn.classList.remove('active'))
+    button.classList.add('active');
+}
 
 
 
@@ -59,9 +63,12 @@ class Poll {
         if(yesCap && noCap){
             yesCap.addEventListener('click', () =>{
                 this.capitalize = true;
+                console.log("Include Capitalization");
             });
             noCap.addEventListener('click', () =>{
                 this.capitalize = false;
+                console.log("Capitalization Unecassary");
+
             });
         }
     }
@@ -71,9 +78,13 @@ class Poll {
         if(yesChar && noChar){
             yesChar.addEventListener('click', () =>{
                 this.specialChar = true;
+                console.log("Include Special Characters");
+
             });
             noChar.addEventListener('click', () =>{
                 this.specialChar = false;
+                console.log("Special Characters Unecassary");
+
             });
         }
     }
