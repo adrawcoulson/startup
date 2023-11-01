@@ -213,14 +213,36 @@ This is the innermost layer and represents the actual content of the element, su
     // Change the text color to green
     byuElement.style.color = "green";
     ## What is the opening HTML tag for a paragraph, ordered list, unordered list, second level heading, first level heading, third level heading?
-   - >p< This is a paragraph"
+   - ">p< This is a paragraph"
    - ">ol<>li<Item 1> ordered list." 
    - ">ul<>li<Item 1 unordered list."
    - ">h2<This is a second-level heading"
    - ">h1<This is the first-level heading"
    - ">h3<This is a third-level heading"
     ## How do you declare the document type to be html?
+   - To declare the document type as HTML in an HTML document, you need to include a Document Type Declaration (DTD) at the beginning of your HTML file. The most common DTD for modern HTML documents is the HTML5 document type declaration, which is as follows:
+   - <!DOCTYPE html>
     ## What is valid javascript syntax for if, else, for, while, switch statements?
+   - if(condition){}else}
+   - for (let i = 0; i < 5; i++) {
+    console.log(i);}
+    - let count = 0;
+while (count < 5) {
+    console.log(count);
+    count++;}
+    - const day = "Monday";
+    switch (day) {
+        case "Monday":
+            console.log("It's the start of the week.");
+            break;
+        case "Friday":
+            console.log("It's almost the weekend.");
+            break;
+        default:
+            console.log("It's an ordinary day.");}
+
+
+
     ## What is the correct syntax for creating a javascript object?
     ## Is is possible to add new properties to javascript objects?
     ## If you want to include JavaScript on an HTML page, which tag do you use?
