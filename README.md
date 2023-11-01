@@ -213,7 +213,12 @@ This is the innermost layer and represents the actual content of the element, su
     // Change the text color to green
     byuElement.style.color = "green";
     ## What is the opening HTML tag for a paragraph, ordered list, unordered list, second level heading, first level heading, third level heading?
-   - <p> This is a paragraph</p> <ol><li>Item 1></li></ol> ordered list. <ul><li>Item 1</li></ul> unordered list. <h2>This is a second-level heading</h2> <h1>This is the first-level heading</h1><h3>This is a third-level heading</h3>
+   - <p> This is a paragraph
+   - <ol><li>Item 1> ordered list. 
+   -  <ul><li>Item 1 unordered list.
+   - <h2>This is a second-level heading
+   - <h1>This is the first-level heading
+   - <h3>This is a third-level heading
     ## How do you declare the document type to be html?
     ## What is valid javascript syntax for if, else, for, while, switch statements?
     ## What is the correct syntax for creating a javascript object?
