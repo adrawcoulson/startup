@@ -35,6 +35,9 @@ I am going to use the required technologies in the following ways:
 -created createpoll.js page which connects setters for Device Name, password length, and several booleans. Capitilization method
 has a toggle function which uses .css and javascript to clarify which option is currently selected
 -Assignment currently unfinishes, sorry! Will be caught up, although unlikely will this happen before the midtermIn the following code, what does the link element do?
+    -
+      -
+      -
     ###Midterm Notes
     ## In the following code,  what does a div tag do?
     - Grouping element, short for divider.
@@ -50,8 +53,33 @@ Padding is useful for adding internal spacing around an element's content, such 
 Padding does not affect the positioning of adjacent elements; it only affects the element itself. Margin is the space outside an element's border and between it and adjacent elements.
 It is used to control the space between elements on the page. Margin creates space between elements.
 Margin affects the positioning of elements relative to one another. It defines the space between elements in the layout.
-    ## Given this HTML and this CSS how will the images be displayed using flex? 
+    ## Given this HTML and this CSS how will the images be displayed using flex?
+  - flex-direction: This property determines the direction in which the flex items are laid out. It can be set to values like row, column, row-reverse, or column-reverse to arrange the images horizontally or vertically.
+justify-content: This property controls how the images are spaced along the main axis of the flex container. You can use values like center, flex-start, flex-end, space-between, or space-around.
+align-items: This property controls how the images are aligned along the cross axis of the flex container. You can use values like center, flex-start, flex-end, baseline, or stretch.
+align-self: This property allows you to control the alignment of individual flex items within the container, overriding the align-items property.
+flex: You can use the flex property to control how flex items grow and shrink within the available space.
     ## What does the following padding CSS do?
+    - One Value: If you provide one value, it applies to all sides of the element.
+css
+Copy code
+padding: 10px;
+In this example, there will be 10 pixels of padding on all sides (top, right, bottom, and left) of the element.
+Two Values: If you provide two values, the first value applies to the top and bottom padding, and the second value applies to the left and right padding.
+css
+Copy code
+padding: 10px 20px;
+In this case, there will be 10 pixels of padding on the top and bottom and 20 pixels of padding on the left and right of the element.
+Four Values: You can provide values for each side individually, in the order of top, right, bottom, and left.
+css
+Copy code
+padding: 10px 20px 15px 30px;
+Here, there will be 10 pixels of padding on the top, 20 pixels on the right, 15 pixels on the bottom, and 30 pixels on the left of the element.
+Three Values: If you provide three values, the first value applies to the top, the second value applies to the left and right, and the third value applies to the bottom.
+css
+Copy code
+padding: 10px 20px 15px;
+In this case, there will be 10 pixels of padding on the top, 20 pixels on the left and right, and 15 pixels on the bottom.
     ## What does the following code using arrow syntax function declaration do?
     ## What does the following code using map with an array output?
     ## What does the following code output using getElementByID and addEventListener?
