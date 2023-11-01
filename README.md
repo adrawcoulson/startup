@@ -94,38 +94,38 @@ In this case, there will be 10 pixels of padding on the top, 20 pixels on the le
     ## What does the following code using map with an array output?
     - In JavaScript, the map() method is used with arrays to create a new array by applying a provided function to each element in the original array. The map() method does not modify the original array; instead, it returns a new array containing the results of applying the function to each element. Here's how map() works:
 
-javascript
-Copy code
-const originalArray = [1, 2, 3, 4, 5];
+    - javascript
+    Copy code
+    const originalArray = [1, 2, 3, 4, 5];
+    
+    const newArray = originalArray.map((element) => {
+        // Your function logic here
+        return /* some transformation or operation on 'element' */;
+    });
 
-const newArray = originalArray.map((element) => {
-    // Your function logic here
-    return /* some transformation or operation on 'element' */;
-});
+    - // 'newArray' now contains the results of applying the function to each element in 'originalArray'
+    The provided function (the callback function) is executed for each element in the array, and its return value becomes the corresponding element in the new array. You can use map() to transform each element in the array, perform calculations, filter elements, or perform any operation you want on each element. Here are a few common use cases:
 
-// 'newArray' now contains the results of applying the function to each element in 'originalArray'
-The provided function (the callback function) is executed for each element in the array, and its return value becomes the corresponding element in the new array. You can use map() to transform each element in the array, perform calculations, filter elements, or perform any operation you want on each element. Here are a few common use cases:
-
-Doubling the Values:
-javascript
-Copy code
-const numbers = [1, 2, 3, 4, 5];
-const doubledNumbers = numbers.map((number) => number * 2);
-// doubledNumbers is now [2, 4, 6, 8, 10]
-Squaring the Values:
-javascript
-Copy code
-const numbers = [1, 2, 3, 4, 5];
-const squaredNumbers = numbers.map((number) => number ** 2);
-// squaredNumbers is now [1, 4, 9, 16, 25]
-Extracting Properties from Objects:
-javascript
-Copy code
-const persons = [
-    { name: "Alice", age: 30 },
-    { name: "Bob", age: 25 },
-    { name: "Charlie", age: 35 }
-];
+    - Doubling the Values:
+    javascript
+    Copy code
+    const numbers = [1, 2, 3, 4, 5];
+    const doubledNumbers = numbers.map((number) => number * 2);
+    // doubledNumbers is now [2, 4, 6, 8, 10]
+    Squaring the Values:
+    javascript
+    Copy code
+    const numbers = [1, 2, 3, 4, 5];
+    const squaredNumbers = numbers.map((number) => number ** 2);
+    // squaredNumbers is now [1, 4, 9, 16, 25]
+    Extracting Properties from Objects:
+    javascript
+    Copy code
+    const persons = [
+        { name: "Alice", age: 30 },
+        { name: "Bob", age: 25 },
+        { name: "Charlie", age: 35 }
+    ];
 
 const names = persons.map((person) => person.name);
 // names is now ["Alice", "Bob", "Charlie"]
