@@ -179,14 +179,41 @@ In this case, there will be 10 pixels of padding on the top, 20 pixels on the le
     - Cross-Browser Compatibility: Browsers provide implementations of the DOM, and there are standards (e.g., the W3C DOM specifications) to ensure compatibility across different browsers.
     - https://github.com/webprogramming260/.github/blob/main/profile/javascript/dom/dom.jpg?raw=true![image](https://github.com/adrawcoulson/startup/assets/108026507/d3a715e4-8ce6-43a5-ae06-dc08361c27e8)
 
-    ## By default, the HTML span element has a default CSS display property value of: 
+    ## By default, the HTML span element has a default CSS display property value of:
+   - inline
     ## How would you use CSS to change all the div elements to have a background color of red?
+   - div {
+    background-color: red;}
     ## How would you display an image with a hyperlink in HTML?
+   - To display an image with a hyperlink in HTML, you can use the <a> (anchor) element to create the hyperlink and the <img> element to display the image. Here's how you can do it:
+   - <a href="https://www.example.com">
+    <img src="image.jpg" alt="Description of the image"></a>
     ## In the CSS box model, what is the ordering of the box layers starting at the inside and working out?
+   - Content Area:
+This is the innermost layer and represents the actual content of the element, such as text, images, or other media. It is defined by the width and height properties of the element.
+    - Padding:
+    The padding is the space between the content area and the element's border. Padding provides an internal spacing within the element's box.
+    - Border:
+    The border is the line that surrounds the padding and content area. It separates the content from the margin. Borders can have various styles, colors, and widths.
+    - Margin:
+    The margin is the outermost layer and represents the space between the element's border and any adjacent elements. It controls the spacing between elements on the page.
     ## Given the following HTML, what CSS would you use to set the text "troubl" to green and leave the "double" text unaffected?
+   - <p>This is double<span class="green-text">troubl</span>.</p>
+    - .green-text {
+    color: green;}
     ## What will the following code output when executed using a for loop and console.log?
+   - for (let i = 1; i <= 5; i++) {
+    console.log("Iteration " + i);}
+    - Iteration 1 Iteration 2 Iteration 3 Iteration 4 Iteration 5
     ## How would you use JavaScript to select an element with the id of “byu” and change the text color of that element to green?
+   - <div id="byu">This is the element with the id "byu."</div>
+   - // Select the element with id "byu"
+    const byuElement = document.getElementById("byu");
+    
+    // Change the text color to green
+    byuElement.style.color = "green";
     ## What is the opening HTML tag for a paragraph, ordered list, unordered list, second level heading, first level heading, third level heading?
+   - <p> This is a paragraph</p> <ol><li>Item 1></li></ol> ordered list. <ul><li>Item 1</li></ul> unordered list. <h2>This is a second-level heading</h2> <h1>This is the first-level heading</h1><h3>This is a third-level heading</h3>
     ## How do you declare the document type to be html?
     ## What is valid javascript syntax for if, else, for, while, switch statements?
     ## What is the correct syntax for creating a javascript object?
