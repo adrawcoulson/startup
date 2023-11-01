@@ -127,18 +127,41 @@ In this case, there will be 10 pixels of padding on the top, 20 pixels on the le
         { name: "Charlie", age: 35 }
     ];
 
-const names = persons.map((person) => person.name);
-// names is now ["Alice", "Bob", "Charlie"]
-Complex Transformations:
-javascript
-Copy code
-const temperaturesInCelsius = [0, 20, 30, 15, 10];
-const temperaturesInFahrenheit = temperaturesInCelsius.map((celsius) => (celsius * 9/5) + 32);
-// temperaturesInFahrenheit is now [32, 68, 86, 59, 50]
-map() is a powerful and versatile array method that is commonly used for data transformation and manipulation. It allows you to process each element of an array and generate a new array based on the results of the provided function.
+    - const names = persons.map((person) => person.name);
+    // names is now ["Alice", "Bob", "Charlie"]
+    Complex Transformations:
+    javascript
+    Copy code
+    const temperaturesInCelsius = [0, 20, 30, 15, 10];
+    const temperaturesInFahrenheit = temperaturesInCelsius.map((celsius) => (celsius * 9/5) + 32);
+    // temperaturesInFahrenheit is now [32, 68, 86, 59, 50]
+    map() is a powerful and versatile array method that is commonly used for data transformation and manipulation. It allows you to process each element of an array and generate a new array based on the results of the provided function.
 
     ## What does the following code output using getElementByID and addEventListener?
-    - 
+   - getElementById and addEventListener are two commonly used methods in JavaScript for working with the Document Object Model (DOM) to manipulate and interact with web page elements. Let's look at each of them individually:
+    - getElementById:
+    - getElementById is a method used to select an HTML element from the DOM by its unique id attribute.
+    It returns a reference to the element with the specified id.
+    You can then use this reference to manipulate the element, such as changing its content, style, or      adding event listeners.
+    - Example usage:
+    - // HTML: <div id="myElement">This is a div.</div>
+    
+    // JavaScript
+    const element = document.getElementById("myElement");
+    element.textContent = "Updated content"; // Change the text content of the element
+    element.style.color = "red"; // Change the text color
+
+    - addEventListener:
+    - addEventListener is a method used to attach event handlers to HTML elements. Event handlers are functions that respond to specific events, such as clicks, mouseovers, key presses, and more.
+    It takes two arguments: the type of event you want to listen for (e.g., "click," "mouseover," "keydown") and the function that should be executed when the event occurs.
+    Multiple event listeners can be attached to the same element.
+    - // HTML: <button id="myButton">Click me</button>
+
+    - // JavaScript
+    const button = document.getElementById("myButton");
+    button.addEventListener("click", function() {
+        alert("Button was clicked!");
+    });
     ## What does the following line of Javascript do using a # selector?
     ## Which of the following are true? (mark all that are true about the DOM)
     ## By default, the HTML span element has a default CSS display property value of: 
