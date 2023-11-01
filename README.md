@@ -159,7 +159,7 @@ In this case, there will be 10 pixels of padding on the top, 20 pixels on the le
 
     - // JavaScript
     const button = document.getElementById("myButton");
-    button.addEventListener("click", function() {
+    button.adDdEventListener("click", function() {
         alert("Button was clicked!");
     });
     ## What does the following line of Javascript do using a # selector?
