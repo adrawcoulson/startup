@@ -35,7 +35,7 @@ I am going to use the required technologies in the following ways:
 -created createpoll.js page which connects setters for Device Name, password length, and several booleans. Capitilization method
 has a toggle function which uses .css and javascript to clarify which option is currently selected
 -Assignment currently unfinishes, sorry! Will be caught up, although unlikely will this happen before the midtermIn the following code, what does the link element do?
-###Midterm Notes
+    ###Midterm Notes
     ## In the following code,  what does a div tag do?
     - Grouping element, short for divider.
     ## In the following code, what is the difference between the #title and .grid selector?
