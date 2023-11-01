@@ -163,7 +163,22 @@ In this case, there will be 10 pixels of padding on the top, 20 pixels on the le
         alert("Button was clicked!");
     });
     ## What does the following line of Javascript do using a # selector?
+    - In CSS, the # symbol is used to select elements by their unique id attributes. This is commonly referred to as an "ID selector." When you use # followed by an id name, it selects a specific HTML element with that ID. 
+    - <div id="myElement">This is a specific element with an ID.</div>
+    - #myElement {
+    color: blue;}
     ## Which of the following are true? (mark all that are true about the DOM)
+   - In the context of computer science and web development, "DOM" stands for Document Object Model. The Document Object Model is a programming interface and representation of structured documents, typically used for HTML and XML documents. It provides a structured way to interact with and manipulate the content and structure of web pages or XML documents. The DOM represents these documents as a tree-like structure, with each element in the document as a node in the tree.
+
+    - Tree Structure: The DOM represents the document's structure as a tree, where each element, attribute, and piece of text is a node in the tree. The root of the tree is the "document" node.
+    - Hierarchical: The tree structure reflects the hierarchical relationships between elements in the document. For example, an HTML document consists of nested elements, and the DOM represents this nesting in the tree.
+    - Programmatic Access: Web developers can use programming languages like JavaScript to access and manipulate the DOM. This allows for dynamic web content and interactive web applications.
+    - HTML and XML: While the DOM is commonly associated with HTML documents, it's also used with XML documents. Both HTML and XML documents can be parsed and represented as a DOM.
+    - Element Properties and Methods: Each node in the DOM tree represents an element, and these elements have properties and methods that can be accessed and modified through JavaScript. For example, you can change the content of an HTML element or update its attributes using the DOM.
+    - Event Handling: The DOM allows developers to attach event listeners to elements, so they can respond to user interactions (e.g., clicks, mouse movements, keyboard inputs).
+    - Cross-Browser Compatibility: Browsers provide implementations of the DOM, and there are standards (e.g., the W3C DOM specifications) to ensure compatibility across different browsers.
+    - https://github.com/webprogramming260/.github/blob/main/profile/javascript/dom/dom.jpg?raw=true![image](https://github.com/adrawcoulson/startup/assets/108026507/d3a715e4-8ce6-43a5-ae06-dc08361c27e8)
+
     ## By default, the HTML span element has a default CSS display property value of: 
     ## How would you use CSS to change all the div elements to have a background color of red?
     ## How would you display an image with a hyperlink in HTML?
