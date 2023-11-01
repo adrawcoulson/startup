@@ -37,6 +37,7 @@ has a toggle function which uses .css and javascript to clarify which option is 
 -Assignment currently unfinishes, sorry! Will be caught up, although unlikely will this happen before the midtermIn the following code, what does the link element do?
 ##Midterm Notes
 -In the following code,  what does a div tag do?
+
 -In the following code, what is the difference between the #title and .grid selector?
 -In the following code, what is the difference between padding and margin?
 -Given this HTML and this CSS how will the images be displayed using flex?
