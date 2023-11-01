@@ -225,29 +225,46 @@ This is the innermost layer and represents the actual content of the element, su
     ## What is valid javascript syntax for if, else, for, while, switch statements?
    - if(condition){}else}
    - for (let i = 0; i < 5; i++) {
-    console.log(i);}
+    - console.log(i);}
     - let count = 0;
-while (count < 5) {
-    console.log(count);
-    count++;}
+    - while (count < 5) {
+    - console.log(count);
+    - count++;}
     - const day = "Monday";
-    switch (day) {
-        case "Monday":
-            console.log("It's the start of the week.");
-            break;
-        case "Friday":
-            console.log("It's almost the weekend.");
-            break;
-        default:
-            console.log("It's an ordinary day.");}
-
-
-
+    - switch (day) {
+       -  case "Monday":
+            - console.log("It's the start of the week.");
+            - break;
+       - case "Friday":
+           - console.log("It's almost the weekend.");
+           - break;
+       - default:
+           - console.log("It's an ordinary day.");}
     ## What is the correct syntax for creating a javascript object?
+   - const javaObj = {};
     ## Is is possible to add new properties to javascript objects?
+   - Yes, it is absolutely possible to add new properties to JavaScript objects, even after the object has been created. JavaScript objects are dynamic, meaning you can add, modify, or remove properties at any time. Here's how you can add new properties to an object:
+    - Dot Notation: const obj = {}; obj.property = value;
+    - Bracket Notation: {}; obj["isStudent"] = false;
+    - Object Literals: { age: 30,};
+    - Object Methods:
+    - Computed Property Names: const property = "age", const obj ={[property]: 30, };
     ## If you want to include JavaScript on an HTML page, which tag do you use?
+   - <head>
+   - <script src="your-script.js"></script>
+   - </head>
     ## Given the following HTML, what JavaScript could you use to set the text "animal" to "crow" and leave the "fish" text unaffected?
+   - <p id="myText">This is an animal and a fish.</p>
+
+    - <script>
+  - // Select the element with id "myText"
+ -  const element = document.getElementById("myText");
+
+  - // Replace the text content
+ - element.textContent = element.textContent.replace("animal", "crow");
+ - </script>
     ## Which of the following correctly describes JSON?
+    - JSON (JavaScript Object Notation) is a lightweight, text-based data interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is often used for data exchange between a server and a web application or between different parts of an application. Here are key characteristics and features of JSON:
     ## What does the console command chmod, pwd, cd, ls, vim, nano, mkdir, mv, rm, man, ssh, ps, wget, sudo  do?
     ## Which of the following console command creates a remote shell session?
     ## Which of the following is true when the -la parameter is specified for the ls console command?
