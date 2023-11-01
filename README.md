@@ -266,12 +266,66 @@ This is the innermost layer and represents the actual content of the element, su
     ## Which of the following correctly describes JSON?
     - JSON (JavaScript Object Notation) is a lightweight, text-based data interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is often used for data exchange between a server and a web application or between different parts of an application. Here are key characteristics and features of JSON:
     ## What does the console command chmod, pwd, cd, ls, vim, nano, mkdir, mv, rm, man, ssh, ps, wget, sudo  do?
+    - chmod: Changes file permissions. It is used to modify the permissions (read, write, execute) of files and directories.
+    - pwd: Prints the current working directory. It shows the path to the directory you are currently in.
+   - cd: Changes the current directory. It is used to navigate to a different directory.
+    - ls: Lists files and directories. It shows the contents of the current directory or a specified directory.
+    - vim and nano: Text editors for the command line. They allow you to create and edit text files directly in the terminal.
+    - mkdir: Creates a new directory. It is used to make new directories or folders.
+    - mv: Moves or renames files and directories. It is used to relocate or rename files and directories.
+    - rm: Removes files and directories. Use it to delete files or directories. Be cautious, as it is not easily reversible.
+    - man: Displays manual pages. You can use it to access documentation and help for various commands. For example, man ls provides information about the ls command.
+    - ssh: Secure Shell. It is used to log into remote machines securely and execute commands on them. It's commonly used for remote server administration.
+    - ps: Shows running processes. It lists the processes running on the system, allowing you to monitor or manage them.
+    - wget: Downloads files from the web. It is a command-line utility to retrieve files from the internet via HTTP, HTTPS, or FTP.
+    - sudo: Superuser "do." It is used to execute a command with elevated privileges. Typically, it requires administrator or root access to perform certain tasks.
     ## Which of the following console command creates a remote shell session?
+    - ssh username@remote_server
+    - ssh john@192.168.1.100
     ## Which of the following is true when the -la parameter is specified for the ls console command?
+    - you get a detailed, long-format listing of all files and directories, including hidden ones.
     ## Which of the following is true for the domain name banana.fruit.bozo.click, which is the top level domain, which is a subdomain, which is a root domain?
+    - "click" is the top-level domain (TLD). It's the highest-level domain in the hierarchy and typically represents the type or purpose of the website.
+    - "bozo.click" is the root domain (or sometimes called the second-level domain). It's the main domain under which you can create various subdomains.
+    - "fruit.bozo.click" is a subdomain. It's a subdivision of the root domain, "bozo.click." Subdomains are used to organize and categorize content or services within the main domain.
+    - "banana.fruit.bozo.click" is a sub-subdomain. It's a further subdivision of the subdomain "fruit.bozo.click."
     ## Is a web certificate is necessary to use HTTPS.
+    - Yes, a web certificate, specifically an SSL/TLS certificate, is necessary to enable HTTPS (Hypertext Transfer Protocol Secure) on a website. Here's why:
+    - Data Encryption: HTTPS secures the communication between a user's web browser and a web server by encrypting the data exchanged. This encryption ensures that sensitive information, such as login credentials, personal data, and payment details, remains confidential and cannot be easily intercepted by malicious actors during transmission.
+    - Authentication: SSL/TLS certificates also provide a level of authentication and trust. They confirm the identity of the website's owner, assuring users that they are connecting to the legitimate site and not a fraudulent one. This is essential for building trust and security on the internet.
+    - Browser Compatibility: Web browsers have built-in security features that require websites to have valid SSL/TLS certificates to establish an HTTPS connection. If a website doesn't have a valid certificate, modern browsers will display a warning to users, discouraging them from interacting with the site.
+    - Domain Validated (DV) Certificates: These verify domain ownership but do not provide extensive validation of the entity behind the domain. They are suitable for basic encryption.
+    - Organization Validated (OV) Certificates: These validate both domain ownership and the legal entity operating the website, providing a higher level of trust.
+    - Extended Validation (EV) Certificates: These offer the highest level of validation and are indicated in web browsers with a green address bar. They are used by businesses and organizations that require the utmost trust and security.
     ## Can a DNS A record can point to an IP address or another A record.
+    - In DNS (Domain Name System), an A (Address) record is used to map a domain name to an IPv4 address. An A record cannot directly point to another A record; it is meant to map a domain or subdomain to an IPv4 address.
     ## Port 443, 80, 22 is reserved for which protocol?
+    - Port 443: Reserved for HTTPS (Hypertext Transfer Protocol Secure). This is the default port for secure web communication, and it's used for encrypted data transfer over the internet, typically for secure websites and online services.
+    - Port 80: Reserved for HTTP (Hypertext Transfer Protocol). This is the default port for unencrypted web communication, used for standard websites and web services. Note that it is less common for websites to use HTTP without encryption these days, as HTTPS is encouraged for security reasons.
+    - Port 22: Reserved for SSH (Secure Shell). SSH is a protocol used for secure remote login and secure file transfers over an unsecured network. It provides encrypted communication for secure access to remote systems.
     ## What will the following code using Promises output when executed?
+    - // Creating a Promise
+const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Promise resolved!");
+    }, 2000); // Resolves after a 2-second delay
+});
+
+// Using the Promise
+myPromise
+    .then((result) => {
+        console.log(result); // Output the resolved value
+    })
+    .catch((error) => {
+        console.error(error); // Handle any potential errors
+    });
+
+console.log("Promise started...");
+
+// Output:
+// Promise started...
+// (after a 2-second delay)
+// Promise resolved!
+
      
 
