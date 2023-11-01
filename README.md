@@ -83,14 +83,14 @@ In this case, there will be 10 pixels of padding on the top, 20 pixels on the le
     ## What does the following code using arrow syntax function declaration do?
     - The arrow function syntax in JavaScript is a concise way to declare and define functions. It provides a more compact and often more readable way of writing functions compared to traditional function expressions. Arrow functions were introduced in ECMAScript 6 (ES6).
 
-Here's the basic structure of an arrow function:
+ - Here's the basic structure of an arrow function:
 
-javascript
-Copy code
-const myFunction = (parameters) => {
-    // Function body
-    return result;
-};
+   - javascript
+    Copy code
+    const myFunction = (parameters) => {
+        // Function body
+        return result;
+    };
     ## What does the following code using map with an array output?
     - In JavaScript, the map() method is used with arrays to create a new array by applying a provided function to each element in the original array. The map() method does not modify the original array; instead, it returns a new array containing the results of applying the function to each element. Here's how map() works:
 
