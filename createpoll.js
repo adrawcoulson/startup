@@ -11,16 +11,6 @@ class Group{
     }
 }
 
-function toggleCapitalization(button){
-    const buttons = document.querySelectorAll('.capitalization button');
-    buttons.forEach((btn) => btn.classList.remove('active'))
-    button.classList.add('active');
-}
-
-
-
-
-
 class Poll {
     deviceName;
     passWordLength;
@@ -47,7 +37,19 @@ class Poll {
         } else {
             console.error("No device name provided");
         }
+        localStorage.setItem("devicename", this.deviceName.value);
     }
+
+    setDeviceUserName() {
+        const inputElement = document.getElementById("devicename");
+        if (inputElement) {
+          this.deviceName = inputElement.value;
+          console.log("Success: Device Name = " + this.deviceName);
+          localStorage.setItem("devicename", this.deviceName);
+        } else {
+          console.error("No device name provided");
+        }
+      }
 
     setPassLength() {
         this.passWordLength = document.getElementById("length");
@@ -64,10 +66,14 @@ class Poll {
             yesCap.addEventListener('click', () =>{
                 this.capitalize = true;
                 console.log("Include Capitalization");
+                yesCap.classList.add('active');
+                noCap.classList.remove('active');
             });
             noCap.addEventListener('click', () =>{
                 this.capitalize = false;
                 console.log("Capitalization Unecassary");
+                yesCap.classList.remove('active');
+                noCap.classList.add('active');
 
             });
         }
@@ -79,11 +85,15 @@ class Poll {
             yesChar.addEventListener('click', () =>{
                 this.specialChar = true;
                 console.log("Include Special Characters");
+                yesChar.classList.add('active');
+                noChar.classList.remove('active');
 
             });
             noChar.addEventListener('click', () =>{
                 this.specialChar = false;
                 console.log("Special Characters Unecassary");
+                yesChar.classList.remove('active');
+                noChar.classList.add('active');
 
             });
         }
@@ -95,12 +105,33 @@ class Poll {
             yesNum.addEventListener('click', () =>{
                 this.includeNumb = true;
                 console.log('Include numbers set to yes');
+                yesNum.classList.add('active');
+                noNum.classList.remove('active');
             });
             noNum.addEventListener('click', () =>{
                 this.includeNumb = false;
                 console.log('Include numbers set to no');
+                yesNum.classList.remove('active');
+                noNum.classList.add('active');
             });
         }
+    }
+    
+    submitDevice(){
+        const poll = new Poll();
+        poll.setDeviceUserName();
+        poll.setPassLength();
+        poll.setCapitalization();
+        poll.setSpecialChars();
+        poll.setIncludeNum();
+        let stringifiedpoll = JSON.stringify(poll);
+        localStorage.setItem("poll", stringifiedpoll);
+        let parsedpoll = JSON.parse(localStorage.getItem("poll"));
+        console.log(parsedpoll);
+        // window.location.href = "vote.html";
+
+
+        parsedpoll.deviceName;
     }
 }
 

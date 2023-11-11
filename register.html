@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href = "register.css" rel = "stylesheet">
+    <script src="register.js"></script>
   </head>
   <body>
     <header>
@@ -20,21 +21,26 @@
 
     <main>
       <h1>Register Account</h1>
-        <div class = register></div>
-        <form method="get" action="vote.html">
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Your name here" />
+      <div class = register></div>
+        <div class = setUserName>
+          <label for="userName">Name</label>
+          <input type="text" id="userName" placeholder="Your name here" />
           <br />
+        </div>
+        <div class = setPassword>
           <label for="password">Password</label>
           <input type="text" id="password" placeholder="Your password here" />
           <br />
-          <label for="email">Email</label>
-          <input type="text" id="email" placeholder="Your email here" />
         </div>
-        </form>
-        <form method="get" action="landing.html">
+          <!--<label for="email">Email</label>
+          <input type="text" id="email" placeholder="Your email here" />-->
+        <div class = submitDevice>
+          <button class = "btn btn=primary" onclick = "createUserObjectInstance.registerUser()">Create Account</button>
+      </div>
+    </div>
+        <!--<form method="get" action="landing.html">
           <button type="submit">Create Account</button>
-        </form>
+        </form>-->
     </main>
     <footer>
     </footer>

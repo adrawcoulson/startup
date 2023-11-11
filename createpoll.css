@@ -20,3 +20,15 @@ main{
 .noCap.active {
     background-color: blue;
 }
+.yesChar.active {
+    background-color: blue;
+}
+.noChar.active {
+    background-color: blue;
+}
+.yesNum.active {
+    background-color: blue;
+}
+.noNum.active {
+    background-color: blue;
+}

@@ -24,27 +24,30 @@
         <div class = setDeviceName>
             <label for="devicename">Device Name</label>
             <input type="text" id="devicename"/>
-            <button class="btn btn-primary" onclick="createPollObjectInstance.setDeviceName(devicename)">SetDeviceName</button>
-        </div>
+            <!--<button class="btn btn-primary" onclick="createPollObjectInstance.setDeviceName(devicename)">SetDeviceName</button>
+        </div>-->
             <br />
-            <label for="length">Password length (Numbers Only)</label>
+            <label for="length">Password Length</label>
             <input type= "number" id="length" step = "1"/>
-            <button class="btn btn-primary" onclick="createPollObjectInstance.setPassLength(length)">SetPasswordLength</button>
-            <br />
+            <!--<button class="btn btn-primary" onclick="createPollObjectInstance.setPassLength(length)">SetPasswordLength</button>
+            <br />-->
             <div class = capitalization>
                 <la>Capitilization</la>
-                <button class="yesCap" onclick="toggleCapitalization(this)">Yes</button>
-                <button class = "noCap" onclick="toggleCapitalization(this)">No</button>
+                <button class="yesCap" onclick ="createPollObjectInstance.setCapitalization()">Yes</button>
+                <button class = "noCap"  onclick ="createPollObjectInstance.setCapitalization()">No</button>
             </div>
             <div class = specialchar>
                 <la>Special Characters</la>
                 <button class="yesChar" onclick="createPollObjectInstance.setSpecialChars()">Yes</button>
-                <button class = "noChar">No</button>
+                <button class = "noChar" onclick="createPollObjectInstance.setSpecialChars()">No</button>
             </div>
             <div class = includenumbers>
                 <la>Include Numbers</la>
                 <button class="yesNum" onclick="createPollObjectInstance.setIncludeNum()">Yes</button>
-                <button class = "noNum">No</button>
+                <button class = "noNum" onclick="createPollObjectInstance.setIncludeNum()">No</button>
+            </div>
+            <div class = submitDevice>
+                <button class = "btn btn=primary" onclick = "createPollObjectInstance.submitDevice()">Submit</button>
             </div>
         </div>
         <div class = invite>
