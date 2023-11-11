@@ -22,22 +22,12 @@ class Poll {
   
     constructor() {
       this.deviceName = '';
-      this.passwordLength = 0;
+      this.passWordLength = 0;
       this.capitalize = true;
       this.specialChar = true;
       this.includeNumb = true;
       this.existingGrp = [];
       this.newGrp = [];
-    }
-
-    setDeviceName() {
-        this.deviceName = document.getElementById("devicename");
-        if(this.deviceName){
-            console.log("Success: Device Name = " + this.deviceName.value);
-        } else {
-            console.error("No device name provided");
-        }
-        localStorage.setItem("devicename", this.deviceName.value);
     }
 
     setDeviceUserName() {
@@ -52,8 +42,9 @@ class Poll {
       }
 
     setPassLength() {
-        this.passWordLength = document.getElementById("length");
-        if(this.passWordLength){
+        const inputElement = document.getElementById("length");
+        if(inputElement){
+            this.passWordLength = inputElement.value;
             console.log("Success: Password Length = " + this.passWordLength.value);
         } else {
             console.error("Password length not provided");
@@ -121,9 +112,12 @@ class Poll {
         const poll = new Poll();
         poll.setDeviceUserName();
         poll.setPassLength();
-        poll.setCapitalization();
-        poll.setSpecialChars();
-        poll.setIncludeNum();
+        this.setCapitalization();
+        poll.capitalize = this.capitalize;
+        this.setSpecialChars();
+        poll.specialChar = this.specialChar;
+        this.setIncludeNum();
+        poll.includeNumb = this.includeNumb;
         let stringifiedpoll = JSON.stringify(poll);
         localStorage.setItem("poll", stringifiedpoll);
         let parsedpoll = JSON.parse(localStorage.getItem("poll"));
