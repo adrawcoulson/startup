@@ -26,6 +26,8 @@ I am going to use the required technologies in the following ways:
     - retrieving suggested passwords
     - submitting votes
     - retrieving vote status
+ 
+- **Service:** Backend service with endpoints for:
 - **Database:** Store users, suggested passwords, and votes
 - **Login:**Register and login users. Credentials securely stored in database. Can't vote unless authenticated.
 - **WebSocket:**As each user submits a password or votes, their password/votes are broadcast to all other users. 
