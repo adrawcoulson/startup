@@ -38,6 +38,6 @@ app.listen(port, () => {
 // The high scores are saved in memory and disappear whenever the service is restarted.
 let devices = [];
 function updateDevices(newDevice, devices) {
-    devices.push(newScore);
-  return scores;
+    devices.push(newDevice);
+  return devices;
 }

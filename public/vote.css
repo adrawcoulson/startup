@@ -19,11 +19,14 @@ main{
 }
 .device{
     text-align: left;
-}
-.voting{
+} 
+.voting th{
+    border: 1px solid #000; /* Border for illustration */
+    padding: 8px;
     text-align: center;
-    justify-content: center;
-    align-items: center;
 }
+
+  
+
 
   

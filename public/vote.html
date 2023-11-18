@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href = "vote.css" rel = "stylesheet">
+
     <!-- Tell browsers not to scale the viewport automatically -->
     <title>Vote</title>
   </head>
@@ -23,7 +25,8 @@
       <div class = "submission">
         <label for="password">Password Submission</label>
         <input type="text" id="password" />
-        <button type="submit">Submit</button>
+        <button class = "btn btn=primary" onclick = "setPassword()">Submit</button>
+
       </div>
 
 
@@ -34,18 +37,17 @@
       <br />
       <br />
       <table class="voting">
+        <thead>
         <tr>
           <th>Username</th>
           <th>Suggestion</th>
           <th>Votes</th>
           <th>Submit</th>
-          <tr>
-            <td data-th="Username">Dad</td>
-            <td data-th="Suggestion">HelloWorld</td>
-            <td data-th="Votes">2</td>
-            <td data-th="Submit"><button>Vote</button></td>
-          </tr>
         </tr>
+      </thead>
+      <tbody id = "tableBody">
+
+      </tbody>
     </main>
     <footer>
     </footer>

@@ -12,3 +12,8 @@ main{
     margin: 0;
     height: 100vh;
 }
+.voting th{
+    border: 1px solid #000; /* Border for illustration */
+    padding: 8px;
+    text-align: center;
+}

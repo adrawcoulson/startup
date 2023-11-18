@@ -34,7 +34,6 @@ class Poll {
         const inputElement = document.getElementById("devicename");
         if (inputElement) {
           this.deviceName = inputElement.value;
-          console.log("Success: Device Name = " + this.deviceName);
           localStorage.setItem("devicename", this.deviceName);
         } else {
           console.error("No device name provided");
@@ -45,7 +44,8 @@ class Poll {
         const inputElement = document.getElementById("length");
         if(inputElement){
             this.passWordLength = inputElement.value;
-            console.log("Success: Password Length = " + this.passWordLength.value);
+            localStorage.setItem("passlength", this.passWordLength);
+
         } else {
             console.error("Password length not provided");
         }
@@ -56,13 +56,11 @@ class Poll {
         if(yesCap && noCap){
             yesCap.addEventListener('click', () =>{
                 this.capitalize = true;
-                console.log("Include Capitalization");
                 yesCap.classList.add('active');
                 noCap.classList.remove('active');
             });
             noCap.addEventListener('click', () =>{
                 this.capitalize = false;
-                console.log("Capitalization Unecassary");
                 yesCap.classList.remove('active');
                 noCap.classList.add('active');
 
@@ -75,14 +73,12 @@ class Poll {
         if(yesChar && noChar){
             yesChar.addEventListener('click', () =>{
                 this.specialChar = true;
-                console.log("Include Special Characters");
                 yesChar.classList.add('active');
                 noChar.classList.remove('active');
 
             });
             noChar.addEventListener('click', () =>{
                 this.specialChar = false;
-                console.log("Special Characters Unecassary");
                 yesChar.classList.remove('active');
                 noChar.classList.add('active');
 
@@ -95,13 +91,11 @@ class Poll {
         if(yesNum && noNum){
             yesNum.addEventListener('click', () =>{
                 this.includeNumb = true;
-                console.log('Include numbers set to yes');
                 yesNum.classList.add('active');
                 noNum.classList.remove('active');
             });
             noNum.addEventListener('click', () =>{
                 this.includeNumb = false;
-                console.log('Include numbers set to no');
                 yesNum.classList.remove('active');
                 noNum.classList.add('active');
             });
@@ -110,8 +104,9 @@ class Poll {
 
     getPlayerName() {
         return localStorage.getItem('userName');
-      }
+    }
     
+    //async// 
     submitDevice(){
         const poll = new Poll();
         poll.setDeviceUserName();
@@ -124,7 +119,11 @@ class Poll {
         poll.includeNumb = this.includeNumb;
         let stringifiedpoll = JSON.stringify(poll);
         localStorage.setItem("poll", stringifiedpoll);
-        this.saveDevice(poll);
+        console.log(stringifiedpoll);
+
+        //await this.saveDevice(poll);
+        window.location.href = "vote.html";
+
     }
 
     async saveDevice(device) {
@@ -157,30 +156,6 @@ class Poll {
         localStorage.setItem('devices', JSON.stringify(devices));
       }
     }
-
-        //let parsedpoll = JSON.parse(localStorage.getItem("poll"));
-        //console.log(parsedpoll);
-        // window.location.href = "vote.html";
-
-
-        //const devicename = (parsedpoll.deviceName)
-        //console.log(parsedpoll.deviceName);
-
-
-// async function GetDeviceName() {
-//     let electronicname = ""
-//     try{
-//         const response = await fetch('/api/scores');
-//         electronicname = await response.json()
-
-//         let parsedpoll = JSON.parse(localStorage.getItem("poll"));
-//         electronicname = parsedpoll.deviceName;
-//         return electronicname;
-//     } catch (error) {
-//         console.error("Error in GetDeviceName:", error);
-//     throw error;
-//     }
-// }
 
 async function loadPasswords() {
     let passwords = [];
