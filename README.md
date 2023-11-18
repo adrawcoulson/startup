@@ -39,5 +39,7 @@ has a toggle function which uses .css and javascript to clarify which option is 
 -Assignment currently unfinishes, sorry! Will be caught up, although unlikely will this happen before the midtermIn the following code, what does the link element do?
 - # November 11 service assignment
 - connected Node.js and Exceed to port 4000
-- Vote.js calls third party endpoint. The word next to Device on the Voting html page regenerates whenever you refresh the page
-- 
+- index.js has api/device and api/devices
+- Vote.js calls third party endpoint. Random words are generated and populate the voting table to create a random voting option whenever the page reloads
+- POST service endpoints exist within createpoll.js. On the create poll page, once you hit the submit button after filling out device information, the device calls a post api method and stores the device in an array on the server
+- GET service endpoint exists within prevpass.js. Once the page loads, any devices you created on the createpoll page will automatically have the device name appear. Passwords column contains a placeholder.
