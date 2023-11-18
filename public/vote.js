@@ -8,6 +8,7 @@ function displayDeviceName() {
 }
 function setPassword() {
     const inputElement = document.getElementById("password");
+    const submitButton = document.getElementById("button"); 
     let storedPoll = localStorage.getItem("poll");
     let cpoll = JSON.parse(storedPoll);
     let passLength = cpoll.passWordLength;
@@ -17,6 +18,7 @@ function setPassword() {
     let canSubmit = true;
     if (inputElement) {
       let passValue = inputElement.value;
+
       if(passValue.length < passLength){
         alert("Password length must be at least " + passLength + " characters long");
       }
@@ -45,6 +47,7 @@ function setPassword() {
       let storedUser = localStorage.getItem("userName");
       const userPassword = inputElement.value;
       populateTable(storedUser, userPassword);
+      button.disabled = true;
     }  
   }
 }
@@ -79,10 +82,26 @@ function populateTable(username, suggestion) {
     const votesCell = document.createElement('td');
     votesCell.textContent = "0";
     row.appendChild(votesCell);
-    
+
     const submitCell = document.createElement('td');
     const submitButton = document.createElement('button');
     submitButton.textContent = 'Vote';
+
+    submitButton.addEventListener('click', function () {
+      if(!submitButton.deactivated){
+        votesCell.textContent = parseInt(votesCell.textContent) + 1;
+        submitButton.deactivated = true;
+
+        const submitButtons = document.querySelectorAll('button');
+        submitButtons.forEach(button => {
+          if(button !== submitButton) {
+            button.deactivated = true;
+          }
+        });
+      }
+    });
+
+
 
     submitCell.appendChild(submitButton);
     row.appendChild(submitCell);
