@@ -1,12 +1,12 @@
 
 class Group{
     users;
-    passwords;
+    //passwords;
     groupName;
 
     constructor(){
         this.users = [];
-        this.passwords = [];
+       // this.passwords = [];
         this.groupName = '';
     }
 }
@@ -107,6 +107,10 @@ class Poll {
             });
         }
     }
+
+    getPlayerName() {
+        return localStorage.getItem('userName');
+      }
     
     submitDevice(){
         const poll = new Poll();
@@ -120,12 +124,73 @@ class Poll {
         poll.includeNumb = this.includeNumb;
         let stringifiedpoll = JSON.stringify(poll);
         localStorage.setItem("poll", stringifiedpoll);
-        let parsedpoll = JSON.parse(localStorage.getItem("poll"));
-        console.log(parsedpoll);
+        this.saveDevice(poll);
+    }
+
+    async saveDevice(device) {
+        const userName = this.getPlayerName();
+        const newDevice = {name: userName, device: device};
+    
+        try {
+          const response = await fetch('/api/device', {
+            method: 'POST',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify(newDevice),
+          });
+    
+          // Store what the service gave us as the high scores
+          const devices = await response.json();
+          localStorage.setItem('devices', JSON.stringify(devices));
+        } catch {
+          // If there was an error then just track scores locally
+          this.updateDevicesLocal(newDevice);
+        }
+      }
+
+      updateDevicesLocal(newDevice) {
+        let devices = [];
+        const devicesText = localStorage.getItem('devices');
+        if (devicesText) {
+          devices = JSON.parse(devicesText);
+        }
+        devices.push(newDevice);
+        localStorage.setItem('devices', JSON.stringify(devices));
+      }
+    }
+
+        //let parsedpoll = JSON.parse(localStorage.getItem("poll"));
+        //console.log(parsedpoll);
         // window.location.href = "vote.html";
 
 
-        parsedpoll.deviceName;
+        //const devicename = (parsedpoll.deviceName)
+        //console.log(parsedpoll.deviceName);
+
+
+// async function GetDeviceName() {
+//     let electronicname = ""
+//     try{
+//         const response = await fetch('/api/scores');
+//         electronicname = await response.json()
+
+//         let parsedpoll = JSON.parse(localStorage.getItem("poll"));
+//         electronicname = parsedpoll.deviceName;
+//         return electronicname;
+//     } catch (error) {
+//         console.error("Error in GetDeviceName:", error);
+//     throw error;
+//     }
+// }
+
+async function loadPasswords() {
+    let passwords = [];
+    try {
+      const response = await fetch('/api/passwords');
+      scores = await response.json();
+      localStorage.setItem('passwords', JSON.stringify(passwords));
+    } catch (error) {
+        console.error("Error in loadPasswords:", error);
+        throw error;
     }
 }
 
