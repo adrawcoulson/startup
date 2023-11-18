@@ -43,3 +43,7 @@ has a toggle function which uses .css and javascript to clarify which option is 
 - Vote.js calls third party endpoint. Random words are generated and populate the voting table to create a random voting option whenever the page reloads
 - POST service endpoints exist within createpoll.js. On the create poll page, once you hit the submit button after filling out device information, the device calls a post api method and stores the device in an array on the server
 - GET service endpoint exists within prevpass.js. Once the page loads, any devices you created on the createpoll page will automatically have the device name appear. Passwords column contains a placeholder.
+- # November 18 Startup DB
+- used database.js, and deployDB.json to create a Mongo database for my startup
+- index.js calls database.js get and post for devices. 
+- once you press 'submit' on the createpoll page, the device is stored on Mongo. All devices instantly appear on Previous Password, even if you refresh the page
