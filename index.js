@@ -21,6 +21,7 @@ apiRouter.get('/devices', (_req, res) => {
 
 // SubmitScore
 apiRouter.post('/device', (req, res) => {
+  console.log("INSIDE POST");
   devices = updateDevices(req.body, devices);
   res.send(devices);
 });

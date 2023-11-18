@@ -106,8 +106,7 @@ class Poll {
         return localStorage.getItem('userName');
     }
     
-    //async// 
-    submitDevice(){
+    async submitDevice(){
         const poll = new Poll();
         poll.setDeviceUserName();
         poll.setPassLength();
@@ -121,8 +120,8 @@ class Poll {
         localStorage.setItem("poll", stringifiedpoll);
         console.log(stringifiedpoll);
 
-        //await this.saveDevice(poll);
-        window.location.href = "vote.html";
+        await this.saveDevice(poll);
+        // window.location.href = "vote.html";
 
     }
 
@@ -131,6 +130,7 @@ class Poll {
         const newDevice = {name: userName, device: device};
     
         try {
+            console.log("INSIDE TRY");
           const response = await fetch('/api/device', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
@@ -141,6 +141,8 @@ class Poll {
           const devices = await response.json();
           localStorage.setItem('devices', JSON.stringify(devices));
         } catch {
+            console.log("INSIDE CATCH");
+
           // If there was an error then just track scores locally
           this.updateDevicesLocal(newDevice);
         }
