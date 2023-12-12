@@ -47,3 +47,8 @@ has a toggle function which uses .css and javascript to clarify which option is 
 - used database.js, and deployDB.json to create a Mongo database for my startup
 - index.js calls database.js get and post for devices. 
 - once you press 'submit' on the createpoll page, the device is stored on Mongo. All devices instantly appear on Previous Password, even if you refresh the page
+- # November 18 Startup Login
+- Implemented login logic for creating new users and logging in with previous username/passwords
+- generates cookies for users that are logged in to restrict users ability to access the previous devices made in create poll on the "Previous Passwords" page. If you are not logged in, you cannot see these devices
+- user and devices are seen within my MongoDB
+- Login page structure changes whether you are logged in or not. If you are logged in, the Home page will give the the option to logout
