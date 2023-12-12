@@ -5,7 +5,6 @@
     <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Family Pass</title>
-    <script src="login.js"></script>
     <link href = "index.css" rel = "stylesheet">
     <link rel="icon" href="favicon.ico" />
     <!-- Latest compiled and minified CSS -->
@@ -43,22 +42,28 @@
       <hr />
     </header>
 
-    <main>
+    <main class="container-fluid bg-secondary text-center">
       <h1>Login to play</h1>
       <div class = login>
-      <form method="get" action="landing.html">
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Your name here" />
-        <br />
-        <label for="password">Password</label>
-        <input type="text" id="password" placeholder="Your password here" />
-        <button class="btn btn-primary" onclick="login()">Login</button>
-        <br />
-      </form>
+        <div id="loginControls" style="display: none">
+          <div class="input-group mb-3">
+            <label for="name">Name</label>
+            <input type="text" id="userName" placeholder= "Your name here" />
+          </div>
+          <div class="input-group mb-3">
+            <label for="password">Password</label>
+            <input type="password" id="userPassword" placeholder= "Your password here" />
+          </div>
+          <button type="button" class="btn btn-primary" onclick="loginUser()">Login</button>
+          <button type="button" class="btn btn-primary" onclick="createUser()">Create</button>
+        </div>
+        <!-- Displayed when ready to play -->
+        <div id="playControls" style="display: none">
+          <div id="playerName"></div>
+          <button type="button" class="btn btn-primary" onclick="play()">Play</button>
+          <button type="button" class="btn btn-secondary" onclick="logout()">Logout</button>
+        </div>
       </div>
-      <!--<form method="get" action="register.html">
-        <button type="submit">Create Account</button>
-      </form>-->
     </main>
 
     <footer>
@@ -69,6 +74,9 @@
       <br />
       <a href="https://github.com/adrawcoulson/startup.git">GitHub</a>
     </footer>
+
+    <script src="login.js"></script>
+
 
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
@@ -87,3 +95,18 @@ crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" 
 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
 crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

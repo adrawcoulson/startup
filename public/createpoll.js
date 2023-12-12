@@ -103,7 +103,7 @@ class Poll {
     }
 
     getPlayerName() {
-        return localStorage.getItem('userName');
+        return localStorage.getItem('userName') ?? 'Mystery player';
     }
     
     async submitDevice(){
@@ -121,7 +121,7 @@ class Poll {
         console.log(stringifiedpoll);
 
         await this.saveDevice(poll);
-        // window.location.href = "vote.html";
+        //window.location.href = "vote.html";
 
     }
 
