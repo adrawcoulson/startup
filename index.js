@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const express = require('express');
 const app = express();
 const DB = require('./database.js');
+const { peerProxy } = require('./peerProxy.js');
 
 const authCookieName = 'token';
 
@@ -22,7 +23,7 @@ app.use(express.static('public'));
 app.set('trust proxy', true);
 
 // Router for service endpoints
-var apiRouter = express.Router();
+const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 // CreateAuth token for a new user
@@ -75,13 +76,13 @@ apiRouter.get('/user/:email', async (req, res) => {
 });
 
 // secureApiRouter verifies credentials for endpoints
-var secureApiRouter = express.Router();
+const secureApiRouter = express.Router();
 apiRouter.use(secureApiRouter);
 
 secureApiRouter.use(async (req, res, next) => {
-  authToken = req.cookies[authCookieName];
+  const authToken = req.cookies[authCookieName];
   const user = await DB.getUserByToken(authToken);
-  console.log(req.cookies);
+  //console.log(req.cookies);
   if (user) {
     next();
   } else {
@@ -96,15 +97,15 @@ secureApiRouter.get('/devices', async (req, res) => {
 
 // SubmitScore
 secureApiRouter.post('/device', async (req, res) => {
-  console.log("inside post device");
+  //console.log("inside post device");
   const device = { ...req.body, ip: req.ip };
-  console.log("made const device");
+  //console.log("made const device");
   await DB.addDevice(device);
-  console.log("await addDevice to DB");
+  //console.log("await addDevice to DB");
   const devices = await DB.getDevices();
-  console.log("const devices");
+  //console.log("const devices");
   res.send(devices);
-  console.log("sent devices");
+  //console.log("sent devices");
 });
 
 // Default error handler
@@ -123,6 +124,8 @@ function setAuthCookie(res, authToken) {
   });
 }
 
-app.listen(port, () => {
+const httpService = app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+peerProxy(httpService);

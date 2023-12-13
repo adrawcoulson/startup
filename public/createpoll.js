@@ -1,16 +1,5 @@
-
-class Group{
-    users;
-    //passwords;
-    groupName;
-
-    constructor(){
-        this.users = [];
-       // this.passwords = [];
-        this.groupName = '';
-    }
-}
-
+const GameEndEvent = 'gameEnd';
+const GameStartEvent = 'gameStart';
 class Poll {
     deviceName;
     passWordLength;
@@ -19,6 +8,7 @@ class Poll {
     includeNumb;
     existingGrp;
     newGrp;
+    socket;
   
     constructor() {
       this.deviceName = '';
@@ -28,6 +18,7 @@ class Poll {
       this.includeNumb = true;
       this.existingGrp = [];
       this.newGrp = [];
+      this.configureWebSocket();
     }
 
     setDeviceUserName() {
@@ -103,7 +94,7 @@ class Poll {
     }
 
     getPlayerName() {
-        return localStorage.getItem('userName') ?? 'Mystery player';
+        return localStorage.getItem('userName') ?? 'Other player';
     }
     
     async submitDevice(){
@@ -128,6 +119,7 @@ class Poll {
     async saveDevice(device) {
         const userName = this.getPlayerName();
         const newDevice = {name: userName, device: device};
+        const devicesName = localStorage.getItem("devicename");
     
         try {
             console.log("INSIDE TRY");
@@ -136,6 +128,9 @@ class Poll {
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(newDevice),
           });
+
+          // Let other players know the game has concluded
+        this.broadcastEvent(userName, GameEndEvent, devicesName);
     
           // Store what the service gave us as the high scores
           const devices = await response.json();
@@ -156,8 +151,51 @@ class Poll {
         }
         devices.push(newDevice);
         localStorage.setItem('devices', JSON.stringify(devices));
-      }
     }
+    
+
+        configureWebSocket() {
+            console.log("in configureWebSocket");
+        const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+        this.socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
+        this.socket.onopen = (event) => {
+        this.displayMsg('system', 'game', 'connected');
+        };
+        this.socket.onclose = (event) => {
+        this.displayMsg('system', 'game', 'disconnected');
+        };
+        this.socket.onmessage = async (event) => {
+        const msg = JSON.parse(await event.data.text());
+        if (msg.type === GameEndEvent) {
+            this.displayMsg('player', msg.from, `logged a new device: ' ${msg.value}`);
+        } else if (msg.type === GameStartEvent) {
+            this.displayMsg('player', msg.from, `started a new game`);
+        }
+        };
+    }
+
+    displayMsg(cls, from, msg) {
+        const playerName = this.getPlayerName();
+        const chatText = document.querySelector('#player-messages');
+        chatText.innerHTML =
+          `<div class="event"><span class="${playerName}-event">${from}</span> ${msg}</div>` + chatText.innerHTML;
+      }
+
+    broadcastEvent(from, type, value) {
+        const event = {
+        from: from,
+        type: type,
+        value: value,
+        };
+        this.socket.send(JSON.stringify(event));
+    }
+}
+
+
+
+
+
+
 
 async function loadPasswords() {
     let passwords = [];
