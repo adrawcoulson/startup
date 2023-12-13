@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div class = "menu">
+        <li><a href="index.html">Login</a></li>
+        <li><a href="vote.html">Vote</a></li>
+        <li><a href="prevpass.html">Previous Passwords</a></li>
+        <li><a href="landing.html">Landing Page</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="createpoll.html">Create Poll</a></li>
+        <li><a href="joinpoll.html">Join Poll</a></li>
+        <li><a href="hello.html">Hello World React</a></li>
+        <li><a href="rendering.html">Rendering React</a></li>
+        <li><a href="component.html">Component React</a></li>
+        <li><a href="events.html">Events React</a></li>
+        <li><a href="conditional.html">Conditional React</a></li>
+        <li><a href="lists.html">Lists React</a></li>
+        <li><a href="forms.html">Forms React</a></li>
+      </div>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+  const root = ReactDOM.createRoot(
+    document.getElementById('root')
+  );
+
+  function tick() {
+    const element = (
+      <div>
+        <h1>Time of Day</h1>
+        <h2>It is {new Date().toLocaleTimeString()}.</h2>
+      </div>
+    );
+    root.render(element);
+  }
+  setInterval(tick, 1000);
+  </script>
+
+  </body>
+</html>
