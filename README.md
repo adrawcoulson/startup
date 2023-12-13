@@ -52,3 +52,8 @@ has a toggle function which uses .css and javascript to clarify which option is 
 - generates cookies for users that are logged in to restrict users ability to access the previous devices made in create poll on the "Previous Passwords" page. If you are not logged in, you cannot see these devices
 - user and devices are seen within my MongoDB
 - Login page structure changes whether you are logged in or not. If you are logged in, the Home page will give the the option to logout
+- # Startup Websocket
+- included Websocket login in peerProxy, index.js reequires this file
+- createPoll.js file includes configureWebSocket and broadcast functions that send messages to all clients
+- game started message is sent when a new Poll class is created, game ended is sent when poll class closes
+- when a client creates a device and presses submit, a message is sent to all clients saying which user created what device. This message mentions the user and device by name
