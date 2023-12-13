@@ -52,6 +52,7 @@ has a toggle function which uses .css and javascript to clarify which option is 
 - generates cookies for users that are logged in to restrict users ability to access the previous devices made in create poll on the "Previous Passwords" page. If you are not logged in, you cannot see these devices
 - user and devices are seen within my MongoDB
 - Login page structure changes whether you are logged in or not. If you are logged in, the Home page will give the the option to logout
+- Users are unable to access the rest of the website unless they are logged in since there is a switch statement in my login.js that sees if the user is in a state of being logged in. The menu to access the rest of the website only becomes available at that point
 - # Startup Websocket
 - included Websocket login in peerProxy, index.js reequires this file
 - createPoll.js file includes configureWebSocket and broadcast functions that send messages to all clients
