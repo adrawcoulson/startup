@@ -6,6 +6,7 @@ function displayDeviceName() {
     let deviceName = cpoll.deviceName;
     containerEl.textContent = deviceName;
 }
+
 function setPassword() {
     const inputElement = document.getElementById("password");
     const submitButton = document.getElementById("button"); 

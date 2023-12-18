@@ -1,0 +1,34 @@
+.menu{
+    text-align: left;
+}
+h1{
+    text-align: center;
+}
+
+footer {
+    flex: 0.2 30px;
+    text-align: center;
+}
+main{
+    flex: 1 70px;
+    justify-content: center;
+    align-items: left;
+}
+.yesCap.active {
+    background-color: blue;
+}
+.noCap.active {
+    background-color: blue;
+}
+.yesChar.active {
+    background-color: blue;
+}
+.noChar.active {
+    background-color: blue;
+}
+.yesNum.active {
+    background-color: blue;
+}
+.noNum.active {
+    background-color: blue;
+}

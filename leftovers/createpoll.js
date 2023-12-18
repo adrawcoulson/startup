@@ -136,7 +136,7 @@ class Poll {
           const devices = await response.json();
           localStorage.setItem('devices', JSON.stringify(devices));
         } catch {
-            console.log("INSIDE CATCH");
+            console.log("Save device threw error");
 
           // If there was an error then just track scores locally
           this.updateDevicesLocal(newDevice);
