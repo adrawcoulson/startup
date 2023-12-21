@@ -45,5 +45,5 @@ ssh -i ~/Downloads/production.pem ubuntu@52.22.1.162
   - The basic usage of fetch takes a URL and returns a promise. The promise then function takes a callback function that is asynchronously called when the requested URL content is obtained. If the returned content is of type application/json you can use the json function on the response object to convert it to a JavaScript object.
 
 
-
+- #1.	What ports are used for HTTP, HTTPS, SSH?
 
