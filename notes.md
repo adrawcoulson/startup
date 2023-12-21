@@ -53,5 +53,18 @@ ssh -i ~/Downloads/production.pem ubuntu@52.22.1.162
     
 **What does the HTTP header content-type allows you to do?**
   - specify the type of content that is being sent in the body of an HTTP request or response. It tells the recipient how the content is encoded or what the media type is so that the recipient can properly interpret and handle the content.
+    
   - For example, if you set Content-Type: application/json in the header, it indicates that the content of the HTTP message body is in JSON format. Similarly, Content-Type: text/html specifies that the content is HTML.
+
+**What do the following attributes of a cookie do? •	Domain •	Path •	SameSite •	HTTPOnly**
+  - Domain: Specifies the domain for which the cookie is valid. Cookies are typically sent to the domain they originated from and any subdomains. For example, a cookie set for .example.com would be sent to example.com as well as subdomain.example.com.
+
+  - Path: Defines the URL path for which the cookie is valid. If a cookie is set with a specific path, it will be sent only to that path and its subdirectories. For instance, a cookie set for /products will be sent to URLs like /products/item1, /products/item2, etc.
+
+  - SameSite: This attribute is a relatively newer addition to cookies and is used to prevent cross-site request forgery attacks. It defines whether a cookie should be sent with cross-origin requests. SameSite=Strict allows cookies to be sent only in a first-party context (requests initiated by the same site). SameSite=Lax allows some cross-site context, for example, a link clicked from an external site. SameSite=None allows cross-origin sharing, but it requires the Secure attribute (secure context, usually over HTTPS).
+
+  - HttpOnly: When this attribute is set, it prevents the cookie from being accessed by JavaScript. It helps mitigate certain types of cross-site scripting (XSS) attacks by ensuring that the cookie is only accessible via HTTP(S) requests and not through client-side scripts.
+
+**Assuming the following Express middleware, what would be the console.log output for an HTTP GET request with a URL path of /foo/bar?**
+
 
