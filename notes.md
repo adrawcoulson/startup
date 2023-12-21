@@ -67,4 +67,17 @@ ssh -i ~/Downloads/production.pem ubuntu@52.22.1.162
 
 **Assuming the following Express middleware, what would be the console.log output for an HTTP GET request with a URL path of /foo/bar?**
 
+  - app.use('/foo', (req, res, next) => {
+  console.log('Middleware for /foo');
+  next();
+});
+
+  - app.use('/foo/bar', (req, res, next) => {
+  console.log('Middleware for /foo/bar');
+  next();
+});
+
+  - Middleware for /foo
+  - Middleware for /foo/bar
+  - This assumes that app refers to an instance of Express, and these middleware functions are registered in sequence using app.use(). The first middleware is triggered because it matches the /foo path, and the second middleware is triggered because it matches the more specific /foo/bar path.
 
