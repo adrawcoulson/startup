@@ -99,8 +99,6 @@ ssh -i ~/Downloads/production.pem ubuntu@52.22.1.162
   - socket.addEventListener('message', event => {
   console.log('Message from server:', event.data);});
 
-  -
-
 **10.	What is the WebSocket protocol used for?**
   - provides a persistent connection between a client and a server, allowing for real-time, bidirectional communication.
   - : WebSocket connections have lower overhead compared to HTTP, reducing the latency involved in establishing and maintaining connections. This makes WebSockets particularly suitable for real-time applications where immediate data transmission is crucial,
@@ -114,7 +112,7 @@ ssh -i ~/Downloads/production.pem ubuntu@52.22.1.162
   - const name = 'John Doe';
 const greeting = <p>Hello, {name}!</p>;
 
-ReactDOM.render(
+  - ReactDOM.render(
   greeting,
   document.getElementById('root')
 );
