@@ -147,4 +147,30 @@ The curly braces signal that the content inside them should be interpreted as Ja
 
   - Based on the provided React code, when executed, the content generated in the HTML element with the ID 'root' will be:
 
+**1.	Assuming a HTML document with a**
+**<div id="root"></div>**
+**element, what content will the following React component generate?
+    function Numbers() { 
+      const numbers = [1, 2, 3, 4, 5];
+      const listItems = numbers.map((number) =>
+        <li>{number}</li>
+      );
+      return(<ul>{listItems}</ul>)
+    }
+    const root = ReactDOM.createRoot(document.getElementById('root')); 
+    root.render(<Numbers/>);**
+    
+  - The provided React code defines a Numbers component that creates an unordered list (<ul>) containing list items (<li>) based on an array of numbers.
+
+  - The Numbers component generates an unordered list (<ul>) containing list items (<li>) for each number in the numbers array. Each list item displays the number itself.
+
+  - When rendered into the HTML element with the ID 'root', the content generated will be: <div id="root">
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+</div>
 
