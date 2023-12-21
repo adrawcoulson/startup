@@ -120,9 +120,9 @@ const greeting = <p>Hello, {name}!</p>;
   - {name} within the JSX tags represents a JavaScript expression, allowing the name variable's value ('John Doe') to be rendered within the <p> element.
 The curly braces signal that the content inside them should be interpreted as JavaScript code.
 
-**12.	Assuming a HTML document with a 
-<div id="root"></div>
-element, what content will the following React component generate?
+**12.	Assuming a HTML document with a**
+**<div id="root"></div>**
+**element, what content will the following React component generate?
       function Welcome(props) {
         return <h1>Hello, {props.name}</h1>;
       }
@@ -137,5 +137,14 @@ element, what content will the following React component generate?
       }
       const root = ReactDOM.createRoot(document.getElementById('root'));
       root.render(<App />);**
+      
 
-      -
+  - The provided React code creates a simple Welcome component that accepts a name prop and returns an <h1> element displaying a greeting.
+
+  - The App component then renders multiple instances of the Welcome component, passing different names as props.
+
+  - Finally, it renders the App component into the HTML element with the ID of 'root'.
+
+  - Based on the provided React code, when executed, the content generated in the HTML element with the ID 'root' will be:
+
+
