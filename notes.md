@@ -81,3 +81,63 @@ ssh -i ~/Downloads/production.pem ubuntu@52.22.1.162
   - Middleware for /foo/bar
   - This assumes that app refers to an instance of Express, and these middleware functions are registered in sequence using app.use(). The first middleware is triggered because it matches the /foo path, and the second middleware is triggered because it matches the more specific /foo/bar path.
 
+**Given the following Express service code: What does the following JavaScript fetch return?**
+  - This code uses fetch to send a GET request to https://api.example.com/data. When the server responds with data, the first .then block checks if the response is okay (status code 200-299). If the response is okay, it parses the response body as JSON. Then, in the second .then block, it logs the parsed JSON data to the console.
+
+  - If any errors occur during the fetch (e.g., network issues, server errors), the .catch block will handle them, logging the error to the console.
+
+**Given the following MongoDB query { cost: { $gt: 10 }, name: /fran.*/} select all of the matching documents.**
+  - Cost: It looks for documents where the cost field is greater than ($gt) 10.
+  - Name: It looks for documents where the name field matches a regular expression (/fran.*/). This regex matches any string that starts with "fran" and is followed by any characters.
+
+**How should you store user passwords in a database?**
+  - Salt Hashmapping
+
+**Assuming the following Node.js service code is executing with websockets, what will be logged to the console of the web browser?**
+  - assuming there's an event listener for WebSocket messages in the client-side JavaScript,const socket = new WebSocket('ws://example.com'); // Replace 'example.com' with your server URL
+
+  - socket.addEventListener('message', event => {
+  console.log('Message from server:', event.data);});
+
+  -
+
+**10.	What is the WebSocket protocol used for?**
+  - provides a persistent connection between a client and a server, allowing for real-time, bidirectional communication.
+  - : WebSocket connections have lower overhead compared to HTTP, reducing the latency involved in establishing and maintaining connections. This makes WebSockets particularly suitable for real-time applications where immediate data transmission is crucial,
+  - Once established, the WebSocket connection remains open, allowing for efficient and instant communication without the need for repeated connection setups (as in traditional HTTP connections).
+
+**11.	What is JSX and how are the curly braces rendered?**
+  - JSX (JavaScript XML) is a syntax extension for JavaScript, commonly associated with React, that allows developers to write HTML-like code within JavaScript. It simplifies the creation of UI components by blending HTML structures with JavaScript functionality.
+
+  - When working with JSX, curly braces {} are used to embed JavaScript expressions or values within the JSX syntax. This enables dynamic content, variable interpolation, function calls, and conditional rendering directly within the JSX code.
+
+  - const name = 'John Doe';
+const greeting = <p>Hello, {name}!</p>;
+
+ReactDOM.render(
+  greeting,
+  document.getElementById('root')
+);
+
+  - {name} within the JSX tags represents a JavaScript expression, allowing the name variable's value ('John Doe') to be rendered within the <p> element.
+The curly braces signal that the content inside them should be interpreted as JavaScript code.
+
+**12.	Assuming a HTML document with a 
+<div id="root"></div>
+element, what content will the following React component generate?
+      function Welcome(props) {
+        return <h1>Hello, {props.name}</h1>;
+      }
+      function App() {
+        return (
+          <div>
+            <Welcome name="Sara" />
+            <Welcome name="Cahal" />
+            <Welcome name="Edite" />
+          </div>
+        );
+      }
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<App />);**
+
+      -
