@@ -46,4 +46,10 @@ ssh -i ~/Downloads/production.pem ubuntu@52.22.1.162
 
 
 **What ports are used for HTTP, HTTPS, SSH?**
+  - HTTP typically uses port 80, HTTPS uses port 443, and SSH uses port 22.
+**What do HTTP status codes in the 300, 400, 500 range indicate?**
+  - 300 range generally indicate redirection, 400 range indicate client errors,  500 range indicate server errors
+**What does the HTTP header content-type allows you to do?**
+  - specify the type of content that is being sent in the body of an HTTP request or response. It tells the recipient how the content is encoded or what the media type is so that the recipient can properly interpret and handle the content.
+  - For example, if you set Content-Type: application/json in the header, it indicates that the content of the HTTP message body is in JSON format. Similarly, Content-Type: text/html specifies that the content is HTML.
 
