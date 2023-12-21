@@ -164,13 +164,44 @@ The curly braces signal that the content inside them should be interpreted as Ja
 
   - The Numbers component generates an unordered list (<ul>) containing list items (<li>) for each number in the numbers array. Each list item displays the number itself.
 
-  - When rendered into the HTML element with the ID 'root', the content generated will be: <div id="root">
-  <ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-  </ul>
-</div>
+  - When rendered into the HTML element with the ID 'root', the content generated will be:
+  - <div id="root">
+  - <ul>
+  - <li>1</li>
+  - <li>2</li>
+  - <li>3</li>
+  - <li>4</li>
+  - <li>5</li>
+  - </ul>
+  - </div>
+
+**14.	What does the following React component do?**
+15.	function Example() {
+16.	  // Declare a new state variable, which we'll call "count"  
+  const [count, setCount] = useState(0);
+17.	  return (
+18.	    <div>
+19.	      <p>You clicked {count} times</p>
+20.	      <button onClick={() => setCount(count + 1)}>
+21.	        Click me
+22.	      </button>
+23.	    </div>
+24.	  );
+
+  - Line 15: The Example function is declared, which represents a React functional component.
+  - Line 16: Within the Example component, a state variable called count is declared using the useState hook. useState(0) initializes count with an initial value of 0. The useState hook returns an array with two elements: the current state value (count) and a function (setCount) to update that state value.
+  - Line 17-23: The return statement contains JSX, defining the UI elements that will be rendered. In this case, it's a div containing a paragraph (<p>) and a button (<button>).
+  - Line 19: Displays a paragraph (<p>) with the text "You clicked {count} times". The curly braces {count} allow the count state variable to be dynamically displayed in the text.
+  - Line 20-22: Defines a button (<button>) element with the text "Click me". It also sets an onClick event handler. When the button is clicked, the setCount function is invoked. This function updates the count state by incrementing its current value by 1 (count + 1).
+
+**25.	What are React Hooks used for?**
+  - introduce state and side effects in functional components. Before Hooks were introduced, functional components in React were stateless and couldn't manage their own state or use lifecycle methods.
+  - useState allow functional components to have their own local state
+  - useEffect replicate lifecycle behavior (such as component mounting, updating, and unmounting) and allow performing side effects (e.g., data fetching, subscriptions, DOM manipulations) within functional components.
+  - Hooks optimize the performance of functional components by enabling the use of React.memo and other performance optimization techniques, avoiding unnecessary re-renders.
+
+**26.	What is the useEffect hook used for?**
+  - perform side effects in functional components. Side effects refer to any code that interacts with the outside world, such as fetching data, subscriptions, manually changing the DOM, or setting up timers.
+  - Replicating Lifecycle Methods: It combines the functionality of componentDidMount, componentDidUpdate, and componentWillUnmount in class-based components. The effect runs after every completed render, but you can control when it runs by specifying dependencies.
+  - Managing Subscription and Cleanup: useEffect returns a cleanup function, which allows you to clean up any subscriptions, event listeners, or other resources created within the effect. This helps prevent memory leaks and ensures proper cleanup when the component is unmounted.
 
