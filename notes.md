@@ -275,5 +275,75 @@ The curly braces signal that the content inside them should be interpreted as Ja
   - Plugin-Based Architecture: Vite's architecture is based on a plugin system, allowing developers to extend and customize its functionality. This enables integration with various tools, preprocessors, and custom workflows.
   - Modern Development Workflow: Vite encourages the use of modern web development features like TypeScript, JSX, CSS preprocessors (like SCSS, Less), and bundling optimizations without complex configuration setups.
 
+**NOTES**
+  - URL: https://byu.edu:443/cs/260/student?filter=accepted#summary
+  - URL: <scheme>://<domain name>:<port>/<path>?<parameters>#<anchor>
+  - HTTP: GET, POST(create), PUT(update), DELETE, OPTIONS
+  - SOP and CORS: Same Origin Policy (SOP) was created. Simply stated SOP only allows JavaScript to make requests to a domain if it is the same domain that the user is currently viewing.
+  - SOP and CORS: Cross Origin Resource Sharing (CORS) allows the client (e.g. browser) to specify the origin of a request and then let the server respond with what origins are allowed.
+  - Service Daemons: When you run a program from the console, the program will automatically terminate when you close the console or if the computer restarts. In order to keep programs running after a shutdown you need to register it as a daemon. The term daemon comes from the idea of something that is always there working in the background.pm2
+  - React: React abstracts HTML into a JavaScript variant called JSX. JSX is converted into valid HTML and JavaScript using a preprocessor called Babel. For example, the following is a JSX file. Notice that it mixes both HTML and JavaScript into a single representation.
+  - React: React hooks allow React function style components to be able to do everything that a class style component can do and more.
+  - function Clicker({initialCount}) {
+  const [count, updateCount] = React.useState(initialCount);
+  return <div onClick={() => updateCount(count + 1)}>Click count: {count}</div>;
+}
+
+ReactDOM.render(<Clicker initialCount={3} />, document.getElementById('root'));
+ 
+  
+  
+  - function UseEffectHookDemo() {
+  React.useEffect(() => {
+    console.log('rendered');
+  });
+
+  return <div>useEffectExample</div>;
+}
+
+ReactDOM.render(<UseEffectHookDemo />, document.getElementById('root'));
+
+
+
+- function UseEffectHookDemo() {
+  const [count, updateCount] = React.useState(0);
+  React.useEffect(() => {
+    console.log('rendered');
+
+    return function cleanup() {
+      console.log('cleanup');
+    };
+  });
+
+  return <div onClick={() => updateCount(count + 1)}>useEffectExample {count}</div>;
+}
+
+ReactDOM.render(<UseEffectHookDemo />, document.getElementById('root'));
+
+
+- You can control what triggers a useEffect hook by specifying its dependencies. In the following example we have two state variables, but we only want the useEffect hook to be called when the component is initially called and when the first variable is clicked. To accomplish this you pass an array of dependencies as a second parameter to the useEffect call.
+
+- function UseEffectHookDemo() {
+  const [count1, updateCount1] = React.useState(0);
+  const [count2, updateCount2] = React.useState(0);
+
+  React.useEffect(() => {
+    console.log(`count1 effect triggered ${count1}`);
+  }, [count1]);
+
+  return (
+    <ol>
+      <li onClick={() => updateCount1(count1 + 1)}>Item 1 - {count1}</li>
+      <li onClick={() => updateCount2(count2 + 1)}>Item 2 - {count2}</li>
+    </ol>
+  );
+}
+
+ReactDOM.render(<UseEffectHookDemo />, document.getElementById('root'));
+
+- If you specify and empty array [] as the hook dependency then it is only called when the component is first rendered.
+
+
+React: Vite bundles your code quickly, has great debugging support, and allows you to easily support JSX, TypeScript, and different CSS flavors. 
 
 
